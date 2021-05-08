@@ -1,15 +1,13 @@
 package com.lugonzo.Springboot101.Dao;
 
 import com.lugonzo.Springboot101.Entity.Student;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-@Repository
-@Qualifier("FakeData")
+@Repository("FakeData")
 public class StudentDao implements StudentDaoInterface, FakeStudentDao {
 
     private static Map<Integer, Student> students;
